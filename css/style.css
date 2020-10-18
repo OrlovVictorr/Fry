@@ -1227,8 +1227,20 @@ header::after {
     width: 50vw;
     margin: 0 50vw 100px 0;
     padding-left: 100px;
+    position: relative;
     
     
+}
+.pppp_l h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4a0008;
+    z-index: -5;
+    font-size: 20vw;
+    
+    font-family: 'Passion One', cursive;
+
 }
 
 .pppp_r {
@@ -1236,10 +1248,21 @@ header::after {
     margin: 0 0 100px 20vw;
     padding-right: 100px;
     text-align: right;
+    position: relative;
 }
 
 
+.pppp_r h2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #4a0008;
+    z-index: -5;
+    font-size: 20vw;
+    
+    font-family: 'Passion One', cursive;
 
+}
 
 
 
