@@ -1,33 +1,67 @@
+@keyframes form {
+    0% {
+        position: fixed;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        bottom: 20px;
+
+    }
+      50% {
+          position: fixed;
+          transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        right: 50%;
+        bottom: 50%;
+
+    }
+
+
+    100% {
+        position: fixed;
+         border-radius: 0;
+        width: 1000px;
+        height: 500px;
+    }
+}
+
 @keyframes tel {
     0% {
         transform: rotate(0deg)
     }
 
     20% {
-         transform: rotate(30deg)
+        transform: rotate(30deg)
     }
 
     30% {
 
-       transform: rotate(-30deg)
-    } 
+        transform: rotate(-30deg)
+    }
+
     40% {
-         transform: rotate(30deg)
+        transform: rotate(30deg)
     }
 
     50% {
 
-       transform: rotate(-30deg)
+        transform: rotate(-30deg)
     }
+
     60% {
 
-       transform: rotate(0)
+        transform: rotate(0)
     }
+
     60% {
 
-       transform: rotate(0)
+        transform: rotate(0)
     }
 }
+
 @keyframes cursor_text {
     0% {
         width: 20px;
@@ -113,19 +147,20 @@
 }
 
 @keyframes cursor_hover_off {
-      0% {
+    0% {
 
         width: 40px;
         height: 40px;
         mix-blend-mode: difference;
 
     }
+
     100% {
         width: 20px;
         height: 20px;
     }
 
- 
+
 }
 
 

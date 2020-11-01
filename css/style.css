@@ -521,6 +521,15 @@
      font-size: 30px !important;
      margin: 0 10px 0 10px !important;
  }
+
+form {
+    position: fixed;
+    
+    background: #333;
+    z-index: 9999;
+    animation: form 2s ease-in-out;
+    transition: 2s;
+}
 /*preloader-------------------------*/
 .preloader {
     display: flex;
@@ -1037,7 +1046,7 @@ header::after {
      position: absolute;
      width: 50vw;
      height: 30vw;
-     transition: .5s;
+     transition: background 1.2s ease, transform .5s linear;;
      opacity: .99;
      z-index: 0;
  }
@@ -1047,7 +1056,7 @@ header::after {
  .box_tv_text3::before {
      top: -30vw;
      left: 0;
-     background-color: #4a0008;
+     background: #4a0008;
      transform-origin: bottom left;
      transform: rotate(-45deg);
  }
@@ -1057,7 +1066,7 @@ header::after {
  .box_tv_text3::after {
      bottom: -30vw;
      right: 0;
-     background-color: #4a0008;
+     background: #4a0008;
      transform-origin: top right;
      transform: rotate(-45deg);
  }
@@ -1065,13 +1074,15 @@ header::after {
  .box_tv_text1:hover::after,
  .box_tv_text2:hover::after,
  .box_tv_text3:hover::after {
-     transform: translateY(-24vw) rotate(-5deg)
+     transform: translateY(-24vw) rotate(-5deg);
+     background: #000;
  }
 
  .box_tv_text1:hover::before,
  .box_tv_text2:hover::before,
  .box_tv_text3:hover::before {
      transform: translateY(8.7vw) rotate(-5deg);
+     background: #000;
  }
 
  .tv_a {
@@ -1164,6 +1175,7 @@ header::after {
     display: flex;
     justify-content: center;
     position: relative;
+    
 }
 
  .slider {
@@ -1201,71 +1213,46 @@ header::after {
 .h1_title {
   text-align: center;
     margin: 0 0 0 80px;
-    color: #fff;
+    color: #ffffff;
     background: #000;
     text-transform: uppercase;
     letter-spacing: 5px;
     line-height: 8vw;
-    font-size: 7vw;
-    font-family: "Roadkill_Alternates";
+    font-size: 60px;
+/*    font-family: "Neoneon";*/
+    font-family: 'Comfortaa', cursive;
+    font-weight: 100;
+/*    text-shadow: 0 0 20px #ff0000, 0 0 20px rgb(190, 33, 33), 0 0 20px rgba(155, 31, 31, 0.27);*/
 /*    -webkit-text-stroke: 1px #fff;*/
 }
 
 /*???????????????????????????????*/
 .content_ppp {
-    width: 70vw;
+    width: 100%;
+   text-align: center;
+}
+.ppp_box {
+        
+ max-width: 1200px;
     margin: 0 auto;
+/*    background: rgba(255, 255, 255, 0.09);*/
+    padding: 0 100px 0 100px;
+    display: flex;
 }
-.p_center {
-    text-align: center;
-    margin: 0;
+.ppp_box_l {
+    text-align: left;
+    justify-content: flex-start;
 }
-
-
-
-.pppp_l {
-    width: 50vw;
-    margin: 0 50vw 100px 0;
-    padding-left: 100px;
-    position: relative;
-    
-    
+.ppp_left {
+    width: 60%;
 }
-.pppp_l h2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #4a0008;
-    z-index: -5;
-    font-size: 20vw;
-    
-    font-family: 'Passion One', cursive;
-
+.ppp_box_r {
+     text-align: left;
+    justify-content: flex-end;
 }
-
-.pppp_r {
-    width: 50vw;
-    margin: 0 0 100px 20vw;
-    padding-right: 100px;
-    text-align: right;
-    position: relative;
+.ppp_right {
+    width: 60%;
 }
-
-
-.pppp_r h2 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #4a0008;
-    z-index: -5;
-    font-size: 20vw;
-    
-    font-family: 'Passion One', cursive;
-
-}
-
-
-
 
 
 
@@ -1297,8 +1284,8 @@ header::after {
 /*font*/
 @font-face {
 
-font-family: "Roadkill_Alternates"; /* Имя шрифта */
+font-family: "Neoneon"; /* Имя шрифта */
 
-src: url(/fonts/Roadkill_Alternates.ttf); /* Путь к файлу со шрифтом */
+src: url(/font/Neoneon.otf); /* Путь к файлу со шрифтом */
 
 }
