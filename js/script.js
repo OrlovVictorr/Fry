@@ -1,9 +1,32 @@
 //preloader.........................................
-let preloader = document.querySelector('.preloader');
+var preloader = document.querySelector('.preloader');
 window.addEventListener('load', () => {
     preloader.style.visibility = "hidden";
     preloader.style.opacity = "0";
 })
+//form..............................................
+
+const form = document.querySelector('.form');
+const allDiv = document.querySelector('.all_div');
+const tel = document.querySelector('.tel');
+ 
+tel.onclick = function () {
+ if (form.classList.contains('form_open_anim')) {
+      form.classList.remove('form_open_anim');
+      form.classList.add('form_close_anim');
+ }
+   else {
+       form.classList.add('form_open_anim');
+       form.classList.remove('form_close_anim');
+   }
+}
+
+allDiv.onclick = function () {
+    form.classList.remove('form_open_anim');
+      form.classList.add('form_close_anim');
+}
+
+
 //cursor............................................
 
 var mouse = [document.querySelector(".cursor"), document.querySelector(".cursor_s")];

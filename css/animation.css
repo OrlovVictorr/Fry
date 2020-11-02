@@ -1,5 +1,6 @@
-@keyframes form {
+@keyframes form_open {
     0% {
+        visibility: visible;
         position: fixed;
         border-radius: 50%;
         width: 60px;
@@ -9,8 +10,9 @@
 
     }
       50% {
+          visibility: visible;
           position: fixed;
-          transform: translate(-50%, -50%);
+          transform: translate(50%, 50%);
         border-radius: 50%;
         width: 60px;
         height: 60px;
@@ -20,11 +22,63 @@
     }
 
 
-    100% {
+    80% {
+        visibility: visible;
+        right: 50%;
+        bottom: 50%;
         position: fixed;
-         border-radius: 0;
+         border-radius: 5px;
         width: 1000px;
         height: 500px;
+        transform: translate(50%, 50%);
+    }
+    100% {
+        visibility: visible;
+        right: 50%;
+        bottom: 50%;
+        position: fixed;
+         border-radius: 5px;
+        width: 1000px;
+        height: 500px;
+        transform: translate(50%, 50%);
+    }
+}
+@keyframes form_close {
+    0% {
+        visibility: visible;
+        right: 50%;
+        bottom: 50%;
+        position: fixed;
+         border-radius: 5px;
+        width: 1000px;
+        height: 500px;
+        transform: translate(50%, 50%);
+
+    }
+    20% {
+        visibility: visible;
+        right: 50%;
+        bottom: 50%;
+        position: fixed;
+         border-radius: 5px;
+        width: 500px;
+        height: 500px;
+        transform: translate(50%, 50%);
+
+    }
+      99% {
+        visibility: visible;
+        position: fixed;
+        transform: translate(50%, 50%);
+        border-radius: 50%;
+        width: 1px;
+        height: 1px;
+        right: 50%;
+        bottom: 50%;
+
+    }
+     100% {
+        visibility: hidden;
     }
 }
 
