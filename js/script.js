@@ -9,21 +9,22 @@ window.addEventListener('load', () => {
 const form = document.querySelector('.form');
 const allDiv = document.querySelector('.all_div');
 const tel = document.querySelector('.tel');
- 
+
 tel.onclick = function () {
- if (form.classList.contains('form_open_anim')) {
-      form.classList.remove('form_open_anim');
-      form.classList.add('form_close_anim');
- }
-   else {
-       form.classList.add('form_open_anim');
-       form.classList.remove('form_close_anim');
-   }
+    if (form.classList.contains('form_open_anim')) {
+        form.classList.remove('form_open_anim');
+        form.classList.add('form_close_anim');
+    } else {
+        form.classList.add('form_open_anim');
+        form.classList.remove('form_close_anim');
+    }
 }
 
 allDiv.onclick = function () {
-    form.classList.remove('form_open_anim');
-      form.classList.add('form_close_anim');
+    if (form.classList.contains('form_open_anim')) {
+        form.classList.remove('form_open_anim');
+        form.classList.add('form_close_anim');
+    }
 }
 
 
@@ -39,53 +40,52 @@ function moveMouse(e) {
     var links = document.querySelectorAll(".cur_link");
     var x = e.clientX;
     var y = e.clientY;
-    
+
     for (let i = 0; i < mouse.length; i++) {
-        
-    mouse[i].style.left = x + 'px';
-    mouse[i].style.top = y + 'px';
+
+        mouse[i].style.left = x + 'px';
+        mouse[i].style.top = y + 'px';
 
 
     }
-    
-    
-for (let i = 0; i < texts.length; i++) {
-    const text = texts[i];
 
-    text.addEventListener('mousemove', moveMouseT);
-    text.addEventListener('mouseout', moveMouseT_off);
-    
-    function moveMouseT(e) {
-    mouse[0].classList.add('cursor_text');
+
+    for (let i = 0; i < texts.length; i++) {
+        const text = texts[i];
+
+        text.addEventListener('mousemove', moveMouseT);
+        text.addEventListener('mouseout', moveMouseT_off);
+
+        function moveMouseT(e) {
+            mouse[0].classList.add('cursor_text');
+        }
+
+        function moveMouseT_off(e) {
+            mouse[0].classList.remove('cursor_text');
+            mouse[0].classList.add('cursor_anim');
+        }
+    }
+
+
+
+    for (let i = 0; i < links.length; i++) {
+        const link = links[i];
+
+        link.addEventListener('mousemove', moveMouseL);
+        link.addEventListener('mouseout', moveMouseL_off);
+
+        function moveMouseL(e) {
+            mouse[0].classList.add('cursor_hover');
+            mouse[0].classList.remove('cursor_hover_off');
+        }
+
+        function moveMouseL_off(e) {
+            mouse[0].classList.add('cursor_hover_off');
+            mouse[0].classList.remove('cursor_hover');
+
+        }
+    }
 }
-
-function moveMouseT_off(e) {
-    mouse[0].classList.remove('cursor_text');
-    mouse[0].classList.add('cursor_anim');
-}
-}
-
-
-
-for (let i = 0; i < links.length; i++) {
-    const link = links[i];
-
-    link.addEventListener('mousemove', moveMouseL);
-    link.addEventListener('mouseout', moveMouseL_off);
-    
-    function moveMouseL(e) {
-    mouse[0].classList.add('cursor_hover');
-    mouse[0].classList.remove('cursor_hover_off');
-}
-
-function moveMouseL_off(e) {
-    mouse[0].classList.add('cursor_hover_off');
-    mouse[0].classList.remove('cursor_hover');
-
-}
-}
-}
-
 
 
 
@@ -117,7 +117,7 @@ function startRotate(event) {
     photo_cardItem.style.transform = 'rotateY(' + (event.offsetX - halfWidth) / speed + 'deg) rotateX(' + -(event.offsetY - halfHeight) / speed + 'deg)';
 
     HeaderCir.style.opacity = "0";
-    
+
     document.querySelector('.header_video').style.opacity = '0';
 
 }
@@ -199,7 +199,7 @@ function animation(e) {
     let posTop = document.documentElement.scrollTop;
 
     if (((aboutMeY - aboutMeH) < document.documentElement.scrollTop) &&
-        ((aboutMeY + aboutMeH ) > document.documentElement.scrollTop)) {
+        ((aboutMeY + aboutMeH) > document.documentElement.scrollTop)) {
         var about = aboutMeY - aboutMeH - posTop;
 
         document.querySelector('.nick').style.right = ((-11) - about / 90) + "vw";
@@ -212,18 +212,18 @@ function logo(e) {
     let posTop = document.documentElement.scrollTop;
 
     if (headerH > document.documentElement.scrollTop) {
-        
+
         document.querySelector('.top_left_logo').classList.remove("contact_left_js");
         document.querySelector('.contact_left_inner').style.marginTop = "0";
         document.querySelector('.contact_left').classList.remove("contact_left_jss");
-        
+
     } else {
-        
+
         document.querySelector('.top_left_logo').classList.add("contact_left_js");
         document.querySelector('.contact_left_inner').style.marginTop = "-10vh";
         document.querySelector('.contact_left').classList.add("contact_left_jss");
-        
-    }   
+
+    }
 }
 //type video....................................................
 //
@@ -258,4 +258,56 @@ function slider() {
     });
 }
 slider();
+
+
+
+const beforeImgs = document.querySelectorAll('.wrap_img_slider_img');
+const beforeImgsSlider = document.querySelector('.slider-before-img');
+const afterImgsSlider = document.querySelector('.slider-after-img');
+const sliderAnimation = document.querySelector('.slider_animation');
+
+for (let i = 0; i < beforeImgs.length; i++) {
+    const beforeImg = beforeImgs[i];
+    //    beforeImg.addEventListener('mousemove', sliderClick);
+    beforeImg.addEventListener("click", sliderClick);
+}
+
+
+
+function sliderClick() {
+
+    let numberFoto = this.getAttribute('number');
+    
+     if (sliderAnimation.classList.contains('slider_open_anim')) {
+         
+          sliderAnimation.classList.remove("slider_open_anim");
+          sliderAnimation.classList.add("slider_open_anim1");
+         
+     } else {
+          sliderAnimation.classList.add("slider_open_anim");
+          sliderAnimation.classList.remove("slider_open_anim1");
+     }
+
+    afterImgsSlider.setAttribute('src', '/img/efect/before' + numberFoto + '.jpg');
+    beforeImgsSlider.setAttribute('src', '/img/efect/after' + numberFoto + '.jpg');
+    
+   
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

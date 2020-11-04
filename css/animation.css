@@ -3,12 +3,16 @@
         visibility: visible;
         position: fixed;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 0px;
+        height: 0px;
         right: 20px;
         bottom: 20px;
+         border-left: 0px #000 solid;
+     border-right: 0px #000 solid;
+        
 
     }
+/*
       50% {
           visibility: visible;
           position: fixed;
@@ -16,54 +20,76 @@
         border-radius: 50%;
         width: 60px;
         height: 60px;
-        right: 50%;
+        right: calc(50% - 40px);
         bottom: 50%;
+           border-left: 0px #000 solid;
+     border-right: 0px #000 solid;
+
 
     }
 
 
     80% {
         visibility: visible;
-        right: 50%;
+        right: calc(50% - 40px);
         bottom: 50%;
         position: fixed;
-         border-radius: 5px;
+        border-radius: 50px;
         width: 1000px;
         height: 500px;
         transform: translate(50%, 50%);
+         border-left: 2px #fff solid;
+     border-right: 2px #fff solid;
+
     }
+*/
     100% {
         visibility: visible;
-        right: 50%;
+        right: calc(50% - 40px);
         bottom: 50%;
         position: fixed;
-         border-radius: 5px;
+         border-radius: 50px;
         width: 1000px;
         height: 500px;
         transform: translate(50%, 50%);
+         border-left: 2px #fff solid;
+     border-right: 2px #fff solid;
+
     }
 }
 @keyframes form_close {
     0% {
-        visibility: visible;
-        right: 50%;
+         visibility: visible;
+        right: calc(50% - 40px);
         bottom: 50%;
         position: fixed;
-         border-radius: 5px;
+         border-radius: 50px;
         width: 1000px;
+        height: 500px;
+        transform: translate(50%, 50%);
+         border-left: 2px #fff solid;
+     border-right: 2px #fff solid;
+
+    }
+/*
+    20% {
+        visibility: visible;
+        right: calc(50% - 40px);
+        bottom: 50%;
+        position: fixed;
+         border-radius: 50%;
+        border-left: 2px #fff solid;
+     border-right: 2px #fff solid;
+        width: 500px;
         height: 500px;
         transform: translate(50%, 50%);
 
     }
-    20% {
-        visibility: visible;
-        right: 50%;
-        bottom: 50%;
-        position: fixed;
-         border-radius: 5px;
-        width: 500px;
-        height: 500px;
-        transform: translate(50%, 50%);
+     60% {
+       
+        border-left: 0px #fff solid;
+     border-right: 0px #fff solid;
+      
 
     }
       99% {
@@ -71,14 +97,25 @@
         position: fixed;
         transform: translate(50%, 50%);
         border-radius: 50%;
+           border-left: 2px #000 solid;
+     border-right: 2px #000 solid;
         width: 1px;
         height: 1px;
         right: 50%;
         bottom: 50%;
 
     }
+*/
      100% {
-        visibility: hidden;
+        visibility: visible;
+        position: fixed;
+        border-radius: 50%;
+        width: 0px;
+        height: 0px;
+        right: 20px;
+        bottom: 20px;
+         border-left: 0px #000 solid;
+     border-right: 0px #000 solid;
     }
 }
 
@@ -336,3 +373,61 @@
 
     }
 }
+
+@keyframes slider_animation {
+
+    0% {
+       visibility: hidden; 
+        background: #000;
+
+    }
+
+/*
+   80% {
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.62);
+
+    }
+*/
+
+    99% {
+       visibility: visible;
+         background: rgba(0, 0, 0, 0);
+
+    }
+    100% {
+       visibility: hidden;
+         background: rgba(0, 0, 0, 0);
+
+    }
+
+}
+@keyframes slider_animation1 {
+
+    0% {
+       visibility: hidden; 
+        background: #000;
+
+    }
+
+/*
+   80% {
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.62);
+
+    }
+*/
+
+    99% {
+       visibility: visible;
+         background: rgba(0, 0, 0, 0);
+
+    }
+    100% {
+       visibility: hidden;
+         background: rgba(0, 0, 0, 0);
+
+    }
+
+}
+
