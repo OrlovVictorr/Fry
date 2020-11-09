@@ -1487,8 +1487,47 @@ background: linear-gradient(0deg, rgba(0,0,0,0.7819502801120448) 0%, rgba(0,0,0,
      font-family: "Neoneon";
 }
 
+/*futer...........................................................*/
+futer {
 
+}
+.fu_top {
+     background: #1a1a1a;
+    padding: 50px;
+ display: flex;
+    margin: 100px;
+     box-shadow: 0 0 11px 7px rgb(0 0 0 / 85%);
+}
+.fu_col {
+    width: 33.3333%;
+}
+.fu_col_center {
+    display: flex;
+    justify-content: center;
+}
+.fu_photo {
+     z-index: 10;
+     width: 25vw;
+/*     filter: grayscale(100%);*/
+     transition: all .3s ease-out 0s, margin-bottom .3s ease-out .1s;
+ }
 
+ .fu_photo img {
+     width: 100%;
+ }
+
+/*
+ .fu_photo:hover {
+     filter: grayscale(0);
+     transform: scale(1.1);
+     margin-bottom: 10vh;
+     filter: drop-shadow(0px 0px 5px #fff);
+     filter: drop-shadow(0px 0px 10px red);
+ }
+*/
+.fu_wrap {
+ 
+}
 
 
 

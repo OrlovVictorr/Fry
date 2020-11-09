@@ -297,17 +297,3 @@ function sliderClick() {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
