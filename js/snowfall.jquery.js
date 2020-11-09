@@ -1,4 +1,4 @@
-/*  Snowfall jquery plugin
+/*  Snowfall jquery plugin 
 
     ====================================================================
     LICENSE

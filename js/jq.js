@@ -1,9 +1,7 @@
 
 
 	$(document).ready(function(){
-         $('.collectonme').hide();
-                document.body.className  = "darkBg";
-                $('.collectonme').show();
+
                 $(document).snowfall({collection : '.collectonme', flakeCount : 250, minSize: 5, maxSize:8, round : true});
         
     });
