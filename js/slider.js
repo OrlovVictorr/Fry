@@ -26,4 +26,3 @@ let mySwiper = new Swiper(slider1, {
 
 })
 
-

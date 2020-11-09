@@ -1303,7 +1303,7 @@ background: linear-gradient(0deg, rgba(0,0,0,0.7819502801120448) 0%, rgba(0,0,0,
  .h1_title_slider_video {
     position: absolute;
      left: 50%;
-     top: -1vw;
+     top: 0;
      transform: translateX(-50%);
      z-index: 10;
      font-size: 4vw;
@@ -1526,12 +1526,22 @@ futer {
  }
 */
 .fu_wrap {
- 
+ width: 100vw;
+    height: 500px;
+    position: relative;
+}
+
+
+.fu_wrap1 {
+ width: 100vw;
+    height: 500px;
 }
 
 
 
-
+.snowfall-flakes {
+    background: rgba(255, 255, 255, 0.50) !important;
+}
 
 
 
