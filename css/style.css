@@ -1492,14 +1492,41 @@ futer {
 
 }
 .fu_top {
+    overflow: hidden;
      background: #1a1a1a;
     padding: 50px;
  display: flex;
     margin: 100px;
      box-shadow: 0 0 11px 7px rgb(0 0 0 / 85%);
+     border-radius: 10px;
+    position: relative;
+}
+.fu_top_forest {
+  position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    z-index: 0;
 }
 .fu_col {
+    z-index: 5;
     width: 33.3333%;
+    position: relative;
+}
+.fu_col_wrap {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fu_col_wrap h1 {
+    font-size: 45px;
+    
+}
+.fu_col_wrap a {
+    font-size: 45px;
+    text-decoration: none;
+    color: #d4d4d4;
 }
 .fu_col_center {
     display: flex;
@@ -1508,7 +1535,7 @@ futer {
 .fu_photo {
      z-index: 10;
      width: 25vw;
-/*     filter: grayscale(100%);*/
+     filter: grayscale(50%);
      transition: all .3s ease-out 0s, margin-bottom .3s ease-out .1s;
  }
 
@@ -1529,12 +1556,7 @@ futer {
  width: 100vw;
     height: 500px;
     position: relative;
-}
-
-
-.fu_wrap1 {
- width: 100vw;
-    height: 500px;
+   
 }
 
 
